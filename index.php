@@ -52,12 +52,12 @@
                 echo '<td>'. $row['telefone'] . '</td>';
                 echo '<td>'. $row['email'] . '</td>';
                 echo '<td>'. $row['sexo'] . '</td>';
-                echo '<td width=260>';
-                echo '<a class="btn btn-primary" href="read.php?id='.$row['id'].'">Listar</a>';
+                echo '<td width=240>';
+                echo '<a class="btn btn-primary" href="read.php?id='.$row['id'].'">List</a>';
                 echo ' ';
-                echo '<a class="btn btn-warning" href="update.php?id='.$row['id'].'">Atualizar</a>';
+                echo '<a class="btn btn-warning" href="update.php?id='.$row['id'].'">Update</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Excluir</a>';
+                echo '<a class="btn btn-danger" href="lib/frontend/delete.php?id='.$row['id'].'">Delete</a>';
                 echo '</td>';
                 echo '<tr>';
               }
