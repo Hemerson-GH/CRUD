@@ -23,13 +23,13 @@
 
         <div class="row">
           <p>
-            <a href="lib/frontend/create.php" class="btn btn-success">Adicionar</a>
+            <a href="lib/frontend/create.php" class="btn btn-success">Add</a>
           </p>
 
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th>Name</th>
+                <center> <th>Name</th></center>
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Email</th>

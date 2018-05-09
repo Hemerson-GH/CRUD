@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<href = "bankend/create.php">
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -7,7 +8,7 @@
         <script src="../js/bootstrap.min.js"></script> -->
         <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <href = "bankend/create.php">
+        <!-- <href = "bankend/create.php">-->
     </head>
 
     <body>
@@ -18,7 +19,7 @@
                     <form class="form-horizontal" action="../backend/create.php" method="post">
                         <br/><br/><br/>
                         <div class="control-group <?php echo !empty($nomeErro)?'error ' : '';?>">
-                            <label class="control-label">Nome</label>
+                            <label class="control-label">Name</label>
                             <div class="controls">
                                 <input size= "50" name="nome" type="text" placeholder="Name" required="" value="<?php echo !empty($nome)?$nome: '';?>">
                                 <?php if(!empty($nomeErro)): ?>
@@ -28,7 +29,7 @@
                         </div>
 
                         <div class="control-group <?php echo !empty($enderecoErro)?'error ': '';?>">
-                            <label class="control-label">Endereço</label>
+                            <label class="control-label">Address</label>
                             <div class="controls">
                                 <input size="50" name="endereco" type="text" placeholder="Address" required="" value="<?php echo !empty($endereco)?$endereco: '';?>">
                                 <?php if(!empty($emailErro)): ?>
@@ -38,7 +39,7 @@
                         </div>
 
                         <div class="control-group <?php echo !empty($telefoneErro)?'error ': '';?>">
-                            <label class="control-label">Telefone</label>
+                            <label class="control-label">Phone</label>
                             <div class="controls">
                                 <input size="50" name="telefone" type="text" placeholder="Phone" required="" value="<?php echo !empty($telefone)?$telefone: '';?>">
                                 <?php if(!empty($emailErro)): ?>
@@ -58,7 +59,7 @@
                         </div>
 
                         <div class="control-group <?php echo !empty($sexoErro)?'error ': '';?>">
-                            <label class="control-label" >Sexo</label>
+                            <label class="control-label" >Sex</label>
                             <div class="controls">
                                 <input size="1" name="sexo" type="text" placeholder="Sex" required="" value="<?php echo !empty($sexo)?$sexo: '';?>">
                                 <?php if(!empty($sexoErro)): ?>
@@ -69,8 +70,8 @@
                         <div class="form-actions">
                             <br/>
 
-                            <button type="submit" class="btn btn-success">Adicionar</button>
-                            <a href="../index.php" type="btn" class="btn btn-default">Voltar</a>
+                            <button type="submit" class="btn btn-success">Add</button>
+                            <a href="../../index.php" type="btn" class="btn btn-danger">Back</a>
 
                         </div>
                     </form>
