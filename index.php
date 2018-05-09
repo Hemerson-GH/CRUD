@@ -29,7 +29,7 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <center> <th>Name</th></center>
+                <th>Name</th>
                 <th>Address</th>
                 <th>Phone</th>
                 <th>Email</th>
@@ -42,7 +42,7 @@
               <?php
               include 'db/banco.php';
               $pdo = Banco::conectar();
-              $sql = 'SELECT * FROM pessoa ORDER BY id DESC';
+              $sql = 'SELECT * FROM pessoa ORDER BY id ASC';
 
               foreach($pdo->query($sql)as $row)
               {
