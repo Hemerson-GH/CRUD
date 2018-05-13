@@ -18,23 +18,38 @@
   </head>
 
   <body>
+    <?php
+       session_start();
+       unset($_SESSION['userID'], $_SESSION['userName'], $_SESSION['userEmail'],
+             $_SESSION['userTypeUser'], $_SESSION['userPass'], $_SESSION['userDate'],
+             $_SESSION['userInstitute'], $_SESSION['userCPF']
+       );
+     ?>
 
     <div class="container">
 
       <form class="form-signin" method="post" action="lib/backend/validacao.php">
         <h2 class="form-signin-heading text-center">SGD's UFLA</h2> <br/>
         <label for="inputEmail" class="sr-only">Email </label>
-        <input type="email" name="inputEmail" class="form-control" placeholder="Email" required autofocus> <!-- <br/> -->
+        <input type="email" name="inputEmail" class="form-control" placeholder="Email" required autofocus> <br/>
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" name="inputPassword" class="form-control" placeholder="Senha" required>
         <div class="checkbox">
-          <label>
+          <!-- <label>
             <input type="checkbox" value="Lembrar"> Lembrar senha
-          </label>
+          </label> -->
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+        <p class="text-center text-danger">
+          <?php
+            // session_start();
+            if (isset($_SESSION['loginErro'])) {
+              echo $_SESSION['loginErro'];
+              unset($_SESSION['loginErro']);
+            }
+          ?>
+        </p>
       </form>
-
     </div> <!-- /container -->
     <script src="node_modules/bootstrap/dist/js/ie10-viewport-bug-workaround.js"></script>
   </body>
