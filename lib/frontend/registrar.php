@@ -147,21 +147,15 @@
                 <p>
                   <input type="radio" name="type_user" id="aluno" value="ALUNO" >
                   <label for="aluno">Aluno</label>
-                  <?php
-                    if (!empty($_SESSION['type_user_vazio'])) {
-                      echo "<p style='color: #f00;'> ".$_SESSION['type_user_vazio']."</p>";
-                      unset($_SESSION['type_user_vazio']);
-                    }
-                  ?>
 
                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
                   <input type="radio" name="type_user" id="prof" value="PROFESSOR" >
                   <label for="prof">Professor</label>
                   <?php
-                    if (!empty($_SESSION['type_user_vazio'])) {
-                      echo "<p style='color: #f00;'> ".$_SESSION['type_user_vazio']."</p>";
-                      unset($_SESSION['type_user_vazio']);
+                    if (!empty($_SESSION['type_User_vazio'])) {
+                      echo "<p style='color: #f00;'> ".$_SESSION['type_User_vazio']."</p>";
+                      unset($_SESSION['type_User_vazio']);
                     }
                   ?>
                 </p>
