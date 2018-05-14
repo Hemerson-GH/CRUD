@@ -9,8 +9,9 @@
         $data = $_POST['data'];
         $instituto = $_POST['instituto'];
         $email = $_POST['email'];
-        $senha = $_POST['senha'];
-        $type_user = $_POST['type_user'];
+        $senha = md5($_POST['senha']);
+        // $type_user = $_POST['type_user'];
+        $type_user = ( isset($_POST['type_user']) ) ? $_POST['type_user'] : null;
 
         //Validaçao dos campos:
         $validacao = true;

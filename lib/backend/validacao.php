@@ -1,7 +1,7 @@
 <?php
   session_start();
   $usuariot = $_POST['inputEmail'];
-  $senhat = $_POST['inputPassword'];
+  $senhat = md5($_POST['inputPassword']);
 
   //echo $usuariot.' - '.$senhat;  // Adicionou essee 't' ao final das palavras, depois retirar
   // include_once("../../db/connection.php");
@@ -30,7 +30,7 @@
 
     if ($_SESSION['userTypeUser'] == "ALUNO") {
       header("Location: page_main_Aluno.php");
-    } else if ($_SESSION['userTypeUser'] == "PROF") {
+    } else if ($_SESSION['userTypeUser'] == "PROFESSOR") {
       header("Location: page_main_Prof.php");
     }
   }
