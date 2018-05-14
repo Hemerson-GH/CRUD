@@ -1,7 +1,7 @@
-Projeto CRUD em PHP - Bootstrap & PDO
+Projeto SGD's em PHP - Bootstrap & PDO
 ======================================
 
-Desenvolvimento de um pequeno projeto CRUD (agenda de contatos) utilizando o acesso a banco de dados com o MySQL e linguagem PHP.
+Desenvolvimento de um pequeno sistema de gerenciamento de disciplinas utilizando o acesso a banco de dados com o MySQL e linguagem PHP.
 
 ##Assuntos abordados no desenvolvimento do projeto:
 
