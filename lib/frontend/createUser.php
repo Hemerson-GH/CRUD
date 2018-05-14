@@ -21,7 +21,7 @@
                         <div class="control-group <?php echo !empty($nomeErro)?'error ' : '';?>">
                             <label class="control-label">Name</label>
                             <div class="controls">
-                                <input size= "50" name="nome" type="text" placeholder="Name" required="" value="<?php echo !empty($nome)?$nome: '';?>">
+                                <input size= "50" name="nome" type="text" placeholder="Name" value="<?php echo !empty($nome)?$nome: '';?>">
                                 <?php if(!empty($nomeErro)): ?>
                                     <span class="help-inline"><?php echo $nomeErro;?></span>
                                 <?php endif;?>
@@ -31,7 +31,7 @@
                         <div class="control-group <?php echo !empty($enderecoErro)?'error ': '';?>">
                             <label class="control-label">Address</label>
                             <div class="controls">
-                                <input size="50" name="endereco" type="text" placeholder="Address" required="" value="<?php echo !empty($endereco)?$endereco: '';?>">
+                                <input size="50" name="endereco" type="text" placeholder="Address" value="<?php echo !empty($endereco)?$endereco: '';?>">
                                 <?php if(!empty($emailErro)): ?>
                                 <span class="help-inline"><?php echo $enderecoErro;?></span>
                                 <?php endif;?>
@@ -41,7 +41,7 @@
                         <div class="control-group <?php echo !empty($telefoneErro)?'error ': '';?>">
                             <label class="control-label">Phone</label>
                             <div class="controls">
-                                <input size="50" name="telefone" type="text" placeholder="Phone" required="" value="<?php echo !empty($telefone)?$telefone: '';?>">
+                                <input size="50" name="telefone" type="text" placeholder="Phone" value="<?php echo !empty($telefone)?$telefone: '';?>">
                                 <?php if(!empty($emailErro)): ?>
                                 <span class="help-inline"><?php echo $telefoneErro;?></span>
                                 <?php endif;?>
@@ -51,7 +51,7 @@
                         <div class="control-group <?php echo !empty($emailErro)?'error ': '';?>">
                             <label class="control-label">Email</label>
                             <div class="controls">
-                                <input size="50" name="email" type="text" placeholder="Email" required="" value="<?php echo !empty($email)?$email: '';?>">
+                                <input size="50" name="email" type="text" placeholder="Email" value="<?php echo !empty($email)?$email: '';?>">
                                 <?php if(!empty($emailErro)): ?>
                                 <span class="help-inline"><?php echo $emailErro;?></span>
                                 <?php endif;?>
@@ -61,7 +61,7 @@
                         <div class="control-group <?php echo !empty($sexoErro)?'error ': '';?>">
                             <label class="control-label" >Sex</label>
                             <div class="controls">
-                                <input size="1" name="sexo" type="text" placeholder="Sex" required="" value="<?php echo !empty($sexo)?$sexo: '';?>">
+                                <input size="1" name="sexo" type="text" placeholder="Sex" value="<?php echo !empty($sexo)?$sexo: '';?>">
                                 <?php if(!empty($sexoErro)): ?>
                                 <span class="help-inline"><?php echo $sexoErro;?></span>
                                 <?php endif;?>

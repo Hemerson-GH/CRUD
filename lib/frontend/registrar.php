@@ -16,7 +16,7 @@
   </head>
 
   <?php
-      require '../backend/createUser.php';
+    session_start();
   ?>
 
   <body>
@@ -29,77 +29,141 @@
 
           <div class="col-sm-4">
             <form class="form-horizontal" action="../backend/createUser.php" method="post">
-              <div class="control-group <?php echo !empty($nomeErro)?'error ' : '';?>">
+              <div class="form-group">
                   <div class="controls">
-                    <input name="nome" class="form-control" type="text"
-                      placeholder="Nome completo" required="" value="<?php echo !empty($nome)?$nome: '';?>"> <br/>
-                      <?php if(!empty($nomeErro)): ?>
-                          <span class="help-inline"><?php echo $nomeErro;?></span>
-                      <?php endif;?>
+                    <input name="nome" class="form-control" type="text" placeholder="Nome Completo"
+                      <?php
+                        if (!empty($_SESSION['value_nome'])) {
+                          echo "value = '".$_SESSION['value_nome']."'";
+                          unset($_SESSION['value_nome']);
+                        }
+                      ?>
+                    >
+                    <?php
+                      if (!empty($_SESSION['nome_vazio'])) {
+                        echo "<p style='color: #f00;'> ".$_SESSION['nome_vazio']."</p>";
+                        unset($_SESSION['nome_vazio']);
+                      }
+                    ?>
                   </div>
               </div>
 
-              <div class="control-group <?php echo !empty($cpfErro)?'error ' : '';?> ">
+              <div class="form-group">
                   <div class="controls">
-                    <input name="cpf"  class="form-control" type="text"
-                      placeholder="CPF" required="" value="<?php echo !empty($cpf)?$cpf: '';?>"> <br/>
-                      <?php if(!empty($cpfErro)): ?>
-                          <span class="help-inline"><?php echo $cpfErro;?></span>
-                      <?php endif;?>
+                    <input name="cpf"  class="form-control" type="text" placeholder="CPF"
+                      <?php
+                        if (!empty($_SESSION['value_cpf'])) {
+                          echo "value = '".$_SESSION['value_cpf']."'";
+                          unset($_SESSION['value_cpf']);
+                        }
+                      ?>
+                    >
+                      <?php
+                        if (!empty($_SESSION['cpf_vazio'])) {
+                          echo "<p style='color: #f00;'> ".$_SESSION['cpf_vazio']."</p>";
+                          unset($_SESSION['cpf_vazio']);
+                        }
+                      ?>
                   </div>
               </div>
 
-              <div class="control-group <?php echo !empty($dataErro)?'error ' : '';?> ">
+              <div class="form-group">
                   <div class="controls">
-                    <input name="data" class="form-control" type="date"
-                      placeholder="Data nascimento" required="" value="<?php echo !empty($data)?$data: '';?>"> <br/>
-                      <?php if(!empty($dataErro)): ?>
-                          <span class="help-inline"><?php echo $dataErro;?></span>
-                      <?php endif;?>
+                    <input name="data" class="form-control" type="date" placeholder="Data de Nascimento"
+                      <?php
+                        if (!empty($_SESSION['value_data'])) {
+                          echo "value = '".$_SESSION['value_data']."'";
+                          unset($_SESSION['value_data']);
+                        }
+                      ?>
+                    >
+                      <?php
+                        if (!empty($_SESSION['data_vazio'])) {
+                          echo "<p style='color: #f00;'> ".$_SESSION['data_vazio']."</p>";
+                          unset($_SESSION['data_vazio']);
+                        }
+                      ?>
                   </div>
               </div>
 
-              <div class="control-group <?php echo !empty($institutoErro)?'error ' : '';?> ">
+              <div class="form-group">
                   <div class="controls">
-                    <input name="instituto" class="form-control" type="text"
-                      placeholder="Instituição" required="" value="<?php echo !empty($instituto)?$instituto: '';?>"> <br/>
-                      <?php if(!empty($institutoErro)): ?>
-                          <span class="help-inline"><?php echo $institutoErro;?></span>
-                      <?php endif;?>
+                    <input name="instituto" class="form-control" type="text" placeholder="Instituição"
+                      <?php
+                        if (!empty($_SESSION['value_instituto'])) {
+                          echo "value = '".$_SESSION['value_instituto']."'";
+                          unset($_SESSION['value_instituto']);
+                        }
+                      ?>
+                    >
+                      <?php
+                        if (!empty($_SESSION['instituto_vazio'])) {
+                          echo "<p style='color: #f00;'> ".$_SESSION['instituto_vazio']."</p>";
+                          unset($_SESSION['instituto_vazio']);
+                        }
+                      ?>
                   </div>
               </div>
 
-              <div class="control-group <?php echo !empty($emailErro)?'error ' : '';?> ">
+              <div class="form-group">
                   <div class="controls">
-                    <input name="email" class="form-control" type="email"
-                      placeholder="Email" required="" value="<?php echo !empty($email)?$email: '';?>"> <br/>
-                      <?php if(!empty($emailErro)): ?>
-                          <span class="help-inline"><?php echo $emailErro;?></span>
-                      <?php endif;?>
+                    <input name="email" class="form-control" type="email" placeholder="Email"
+                      <?php
+                        if (!empty($_SESSION['value_email'])) {
+                          echo "value = '".$_SESSION['value_email']."'";
+                          unset($_SESSION['value_email']);
+                        }
+                      ?>
+                    >
+                      <?php
+                        if (!empty($_SESSION['email_vazio'])) {
+                          echo "<p style='color: #f00;'> ".$_SESSION['email_vazio']."</p>";
+                          unset($_SESSION['email_vazio']);
+                        }
+                      ?>
                   </div>
               </div>
 
-              <div class="control-group <?php echo !empty($emailErro)?'error ' : '';?> ">
+              <div class="form-group">
                   <div class="controls">
-                    <input name="senha" class="form-control" type="password"
-                      placeholder="Senha" required="" value="<?php echo !empty($senha)?$senha: '';?>"> <br/>
-                      <?php if(!empty($emailErro)): ?>
-                          <span class="help-inline"><?php echo $emailErro;?></span>
-                      <?php endif;?>
+                    <input name="senha" class="form-control" type="password" placeholder="Senha"
+                      <?php
+                        if (!empty($_SESSION['value_senha'])) {
+                          echo "value = '".$_SESSION['value_senha']."'";
+                          unset($_SESSION['value_senha']);
+                        }
+                      ?>
+                    >
+                      <?php
+                        if (!empty($_SESSION['senha_vazio'])) {
+                          echo "<p style='color: #f00;'> ".$_SESSION['senha_vazio']."</p>";
+                          unset($_SESSION['senha_vazio']);
+                        }
+                      ?>
                   </div>
               </div>
 
-              <div class="control-group <?php echo !empty($type_userErro)?'error ' : '';?> " align="left">
-                <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <input type="radio" name="type_user" id="aluno" value="ALUNO">
+              <div class="form-group" align="center">
+                <p>
+                  <input type="radio" name="type_user" id="aluno" value="ALUNO" >
                   <label for="aluno">Aluno</label>
-                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <input type="radio" name="type_user" id="prof" value="PROFESSOR">
-                  <label for="prof">Professor</label>
+                  <?php
+                    if (!empty($_SESSION['type_user_vazio'])) {
+                      echo "<p style='color: #f00;'> ".$_SESSION['type_user_vazio']."</p>";
+                      unset($_SESSION['type_user_vazio']);
+                    }
+                  ?>
 
-                  <?php if(!empty($type_userErro)): ?>
-                    <span class="help-inline"><?php echo $type_userErro;?></span>
-                  <?php endif;?>
+                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                  <input type="radio" name="type_user" id="prof" value="PROFESSOR" >
+                  <label for="prof">Professor</label>
+                  <?php
+                    if (!empty($_SESSION['type_user_vazio'])) {
+                      echo "<p style='color: #f00;'> ".$_SESSION['type_user_vazio']."</p>";
+                      unset($_SESSION['type_user_vazio']);
+                    }
+                  ?>
                 </p>
               </div>
 
