@@ -13,7 +13,6 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/ie-emulation-modes-warning.js"></script>
-
     <link href="node_modules/bootstrap/dist/css/signin.css" rel="stylesheet">
   </head>
 
@@ -29,16 +28,17 @@
     <div class="container">
 
       <form class="form-signin" method="post" action="lib/backend/validacao.php">
+        <!-- <img src="img/icon_ufla_192x192.png" class="right-block" width="250"> -->
         <h2 class="form-signin-heading text-center">SGD's UFLA</h2> <br/>
-        <label for="inputEmail" class="sr-only">Email </label>
+        <label for="inputEmail" class="sr-only" >Email </label>
         <input type="email" name="inputEmail" class="form-control" placeholder="Email" required autofocus> <br/>
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" name="inputPassword" class="form-control" placeholder="Senha" required>
-        <div class="checkbox">
-          <!-- <label>
+        <!-- <div class="checkbox">
+          <label>
             <input type="checkbox" value="Lembrar"> Lembrar senha
-          </label> -->
-        </div>
+          </label>
+        </div> -->
         <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
         <p class="text-center text-danger">
           <?php
@@ -50,6 +50,9 @@
           ?>
         </p>
       </form>
+      <div align="center">
+        <a href="lib/frontend/registrar.php"> <u> Registrar-se </u>
+      </div>
     </div> <!-- /container -->
     <script src="node_modules/bootstrap/dist/js/ie10-viewport-bug-workaround.js"></script>
   </body>
