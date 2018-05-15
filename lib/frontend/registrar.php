@@ -145,19 +145,19 @@
 
               <div class="form-group" align="center">
                 <p>
-                  <input type="radio" name="type_user" id="aluno" value="ALUNO" >
+                  <input 
+                    type="radio" name="type_user" id="type" value="ALUNO" 
+                    <?php echo ($_SESSION['value_type_User'] == 'ALUNO' ? "checked":null)?>
+                  >
                   <label for="aluno">Aluno</label>
 
                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-                  <input type="radio" name="type_user" id="prof" value="PROFESSOR" >
+                  <input 
+                    type="radio" name="type_user" id="type" value="PROFESSOR"
+                    <?php echo ($_SESSION['value_type_User'] == 'PROFESSOR' ? "checked":null)?>
+                  >
                   <label for="prof">Professor</label>
-                  <?php
-                    if (!empty($_SESSION['type_User_vazio'])) {
-                      echo "<p style='color: #f00;'> ".$_SESSION['type_User_vazio']."</p>";
-                      unset($_SESSION['type_User_vazio']);
-                    }
-                  ?>
                 </p>
               </div>
 
